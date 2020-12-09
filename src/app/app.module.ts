@@ -13,10 +13,8 @@ const rutas: Routes = [
   {path: "", component: ContainerComponent}​​​​​​​​​​​​​​​​​​​​​,{path: "datos",component: DatosComponent}​​​​​​​
 ];
 
-RouterModule.forRoot(rutas)
-
 @NgModule({
-  imports:      [ BrowserModule, FormsModule ],
+  imports:[BrowserModule, FormsModule, RouterModule.forRoot(rutas)],
   declarations: [ AppComponent, HelloComponent, ChatComponent, ContainerComponent, DatosComponent ],
   bootstrap:    [ AppComponent ],  
 })
